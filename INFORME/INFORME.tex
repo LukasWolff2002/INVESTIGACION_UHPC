@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum} % Paquete para generar texto de prueba
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{tikz} % Para dibujar figuras
+
+\usepackage{geometry} % Para ajustar el tamaño del texto y los márgenes
+% Ajusta el tamaño del texto y los márgenes
+\geometry{
+    left=30mm, % Margen izquierdo
+    top=25mm, % Margen superior
+}
+\usepackage{float} % Para la opción [H]
+\usepackage{enumitem}
+\usepackage[spanish]{babel} % Cargar el idioma español
+
+
+\title{\textbf{SINCRONIZACION CAMARAS}\\[0.5em] \large Investigacion UHPC}
+\author{Lukas Wolff Casanova}
+\date{\today}
+\begin{document}
+
+\maketitle
+\hrule
+
+\section{INTRODUCCION}
+
+\noindent Actualmente se está utilizando el método PIV en la simulación del carbopol, el cual, en pocas palabras, utiliza un plano bidimensional para rastrear partículas. El problema radica en que buscamos hacer la simulación en torno a fibras, las cuales pueden rotar, por lo cual es necesario implementar una simulación tridimensional para poder utilizar la tecnología PTV.
+\\ \\
+En base a lo anterior, se plantea lograr una sincronización de las cámaras para así poder implementar el software.
+
+\section{METODOLOGIA}
+
+\noindent Para poder realizar una sincronización de las cámaras es necesario implementar un trigger, el cual puede ser mediante software (SW) o hardware (HW). Previo a decidir cuál era el trigger correcto a implementar, se comenzó a armar el setup para poder sincronizar las cámaras.
+\\ \\
+El setup consistió básicamente de una hélice sobre un motor brushless, donde, mediante un sensor infrarrojo, se podía medir sus revoluciones en tiempo real. Además, se diseñó un soporte para las cámaras, de modo que estas estuvieran alineadas en todo momento.
+\\ \\
+Los diseños 3D realizados son los siguientes:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{MODELOS/HELICE.png}
+      \caption{Helice}
+    \end{minipage}
+    \begin{minipage}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{MODELOS/CAMARAS.png}
+      \caption{Soporte camaras}
+    \end{minipage}
+    \begin{minipage}[b]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{MODELOS/MOTOR.png}
+      \caption{Soporte motor y sensor}
+    \end{minipage}
+\end{figure}
+
+\newpage
+\noindent A continuación se mostrarán las iteraciones para llegar al setup final.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.25\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{FOTOS/PS.png}
+      \caption{Prueba sensor}
+    \end{minipage}
+    \begin{minipage}[c]{0.25\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{FOTOS/H.png}
+      \caption{Helice}
+    \end{minipage}
+    \begin{minipage}[c]{0.25\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{FOTOS/C.png}
+      \caption{Prueba soporte camaras}
+    \end{minipage}
+\end{figure}
+
+\noindent Se determinó que el sensor infrarrojo no lograba medir correctamente las revoluciones, ya que este utilizaba el reflejo de la luz y no alcanzaba a recibir la señal de vuelta. El profesor Jorge sugirió utilizar un medidor de revoluciones láser.
+\\ \\
+Al mismo tiempo que se realizaba el setup, se contactó a Basler, quienes nos redirigieron con un contacto en Chile. Hablando con Jorge (el contacto), se concluyó que la mejor forma de realizar el trigger es mediante software, donde además nos dio un hub de Python como guía.
+\\ \\
+El código Python se optimizó de modo que durante el ciclo de fotos, estas solo se guardan en una variable sin procesar, y posteriormente, se almacenan como imágenes visibles y no como un array.
+\\ \\
+Finalmente, el setup es el siguiente:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[c]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{FOTOS/SF.png}
+      \caption{Setup final 1}
+    \end{minipage}
+    \begin{minipage}[c]{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{FOTOS/HF.png}
+      \caption{Setup final 2}
+    \end{minipage}
+\end{figure}
+
+\noindent Por lo tanto, el proceso para realizar una medición es el siguiente:
+
+\begin{itemize}
+    \item Encender motor brushless
+    \item Medir RPM
+    \item Disparar cámaras
+\end{itemize}
+
+\noindent Es importante notar que el motor gira en sentido horario. Además, las mediciones fueron realizadas a 700 FPS.
+
+\newpage
+\section{RESULTADOS}
+
+\noindent A continuación se mostrarán las fotos de una medición a 5826 RPM.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/0/0-1.png}
+      \caption{Imagen 1 camara 0}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/1/1-1.png}
+      \caption{Imagen 1 camara 1}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/0/0-2.png}
+      \caption{Imagen 2 camara 0}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/1/1-2.png}
+      \caption{Imagen 2 camara 1}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/0/0-3.png}
+      \caption{Imagen 3 camara 0}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/1/1-3.png}
+      \caption{Imagen 3 camara 1}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/0/0-4.png}
+      \caption{Imagen 4 camara 0}
+    \end{minipage}
+    \begin{minipage}[b]{0.45\textwidth}
+      \centering
+      \includegraphics[width=0.8
+      \textwidth]{5826/1/1-4.png}
+      \caption{Imagen 4 camara 1}
+    \end{minipage}
+\end{figure}
+
+\noindent Se puede observar que entre cada toma del mismo número, es decir 0-1 y 1-1, por ejemplo, se da un desfase de aproximadamente 30 grados, o 0.08 de vuelta, lo que equivale a 0.0001311 s.
+\\ \\
+Una incógnita que surgió es si son 30 grados o 390 grados, ya que no es posible determinarlo a simple vista. Pero si la cámara está funcionando a 700 FPS, quiere decir que se están sacando más fotos que vueltas por segundo, lo que ratifica los 30 grados.
+\\ \\
+Se realizaron 3 pruebas a distintas RPM, los resultados son los siguientes:
+
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+    \hline
+    RPM & DESFASE [s] \\
+    \hline
+    5826 & 0.0001311 \\
+    \hline
+    10519 & 0.00045 \\
+    \hline
+    12394 & 0.0003 \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\noindent Para finalizar, se intentó tomar una gran cantidad de fotos (300 en total), pero el código solo tomó 20.
+
+\section{CONCLUCION}
+\noindent En conclusión, se logró sincronizar las cámaras con muy poco desfase, el cual siempre va a existir ya que el trigger es mediante SW, donde se corre un ciclo for. Si se hace mediante HW se podría erradicar esta diferencia, pero puede llegar a ser más costoso y complejo. Además, tomando a favor la velocidad del carbopol, se puede determinar que esta diferencia es despreciable en las mediciones.
+\\ \\
+Finalmente, se determinó que el próximo desafío es cómo tomar y procesar un gran número de fotos.
+
+\end{document}
+
+
