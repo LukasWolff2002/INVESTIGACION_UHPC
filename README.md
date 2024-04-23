@@ -1,1 +1,1 @@
-![Texto alternativo](INFORME/INFORME.pdf)
+![INFOMRE](INFORME/INFORME.pdf)
