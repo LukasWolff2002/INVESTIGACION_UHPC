@@ -8,7 +8,7 @@ from PIL import Image
 #ARREGLAR UN POCO YA QUE CHATGPT MODIFICO COMO SE SACAN LAS FOTOS
 
 # Number of images to be grabbed.
-countOfImagesToGrab = 300
+countOfImagesToGrab = 10
 
 # Limits the amount of cameras used for grabbing.
 maxCamerasToUse = 2
@@ -41,9 +41,9 @@ try:
         cam.Attach(tlFactory.CreateDevice(devices[i]))
 
         cam.Open()
-        cam.ExposureTime.SetValue(100)  # 100000 microsecond
-        #cam.AcquisitionFrameRateEnable.SetValue(true)
-        cam.AcquisitionFrameRate.SetValue(700.0)
+        #cam.ExposureTime.SetValue(100)  # 100000 microsecond
+        cam.AcquisitionFrameRateEnable.SetValue(True)
+        cam.AcquisitionFrameRate.SetValue(1)
         cam.Close()
 
     # Starts grabbing for all cameras starting with index 0.
@@ -71,8 +71,9 @@ for i, elementos in enumerate(imagenes):
     img = elementos.GetArray()
     camara = elementos.GetCameraContext()
     tiempo = elementos.GetTimeStamp()
-    tiempo = datetime.datetime.fromtimestamp(tiempo / 1000.0)
-    tiempo_str = tiempo.strftime("%H-%M-%S-%f")  # Usamos '-' para evitar problemas con el formato del nombre del archivo
+    print(tiempo)
+    #tiempo = datetime.datetime.fromtimestamp(tiempo / 1000.0)
+    #tiempo = tiempo.strftime("%H-%M-%S-%f")  # Usamos '-' para evitar problemas con el formato del nombre del archivo
 
     # Carpeta donde se almacenarán las imágenes
     folder_path = f'FOTOS/{camara}'
@@ -83,7 +84,7 @@ for i, elementos in enumerate(imagenes):
         os.makedirs(folder_path)
 
     # Nombre del archivo de la imagen
-    file_name = f'{tiempo_str}.png'
+    file_name = f'{tiempo}.png'
 
     # Ruta completa del archivo de la imagen
     file_path = os.path.join(folder_path, file_name)
