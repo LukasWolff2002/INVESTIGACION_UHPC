@@ -4,11 +4,16 @@ from pypylon import genicam, pylon
 import sys
 import datetime
 from PIL import Image
+import cv2
 
-#ARREGLAR UN POCO YA QUE CHATGPT MODIFICO COMO SE SACAN LAS FOTOS
+#---------------------
+RPM = 12055
+#---------------------
+
+RPM = str(RPM)
 
 # Number of images to be grabbed.
-countOfImagesToGrab = 10
+countOfImagesToGrab =  20
 
 # Limits the amount of cameras used for grabbing.
 maxCamerasToUse = 2
@@ -41,9 +46,10 @@ try:
         cam.Attach(tlFactory.CreateDevice(devices[i]))
 
         cam.Open()
-        #cam.ExposureTime.SetValue(100)  # 100000 microsecond
+        
         cam.AcquisitionFrameRateEnable.SetValue(True)
-        cam.AcquisitionFrameRate.SetValue(1)
+        cam.AcquisitionFrameRate.SetValue(200)
+        cam.ExposureTime.SetValue(100)  # 100000 microsecond
         cam.Close()
 
     # Starts grabbing for all cameras starting with index 0.
@@ -55,6 +61,7 @@ try:
     # Grab countOfImagesToGrab from the cameras.
     for i in range(countOfImagesToGrab):
         if not cameras.IsGrabbing():
+            print('hols')
             break
         
         grabResult = cameras.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
@@ -69,14 +76,14 @@ except genicam.GenericException as e:
 
 for i, elementos in enumerate(imagenes):
     img = elementos.GetArray()
+    img = cv2.equalizeHist(img)
     camara = elementos.GetCameraContext()
     tiempo = elementos.GetTimeStamp()
-    print(tiempo)
     #tiempo = datetime.datetime.fromtimestamp(tiempo / 1000.0)
     #tiempo = tiempo.strftime("%H-%M-%S-%f")  # Usamos '-' para evitar problemas con el formato del nombre del archivo
 
     # Carpeta donde se almacenarán las imágenes
-    folder_path = f'FOTOS/{camara}'
+    folder_path = f'FOTOS/{RPM}/{camara}'
     print(folder_path)
 
     # Crear la carpeta si no existe
@@ -96,18 +103,3 @@ for i, elementos in enumerate(imagenes):
     image.save(file_path)
 
     print(f"Imagen guardada: {file_path}")
-
-        
-
-
-
-# Comment the following line to disable waiting on exit.
-sys.exit(exitCode)
-
-
-
-
-'''
-plt.imshow(img)
-        plt.show()
-        '''
