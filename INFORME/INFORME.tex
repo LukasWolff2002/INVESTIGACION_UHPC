@@ -277,11 +277,10 @@ Finalmente, el setup es el siguiente:
     \end{minipage}
 \end{figure}
 
-\noindent De esta ultima toma es interesante notar que todas las fotos son practicamente iguales en posicion, esto es debido a que 
-la helice giraba con aproximadamente a la misma frecuancia que FPS.
+\noindent De esta última toma, es interesante notar que todas las fotos son prácticamente iguales en posición. Esto se debe a que la hélice giraba a aproximadamente la misma frecuencia que los FPS.
 
 \newpage
-Ademas se realizo una medicion a 1 FPS para verificar resultados:
+Además, se realizó una medición a 1 FPS para verificar los resultados.
 
 \begin{figure}[H]
   \centering
@@ -338,10 +337,9 @@ Ademas se realizo una medicion a 1 FPS para verificar resultados:
 \newpage
 \section {ANALISIS}
 
-En primer lugar surgio la incognita de si el desfase era una pequeña porcion de vuelta o una vuelta completa mas fraccion, pero como se 
-estan sacando mas fotos que RPS, significa que solo se tienen un desfase muy chico.
+\noindent En primer lugar, surgió la incógnita de si el desfase era una pequeña porción de vuelta o una vuelta completa más fracción. Sin embargo, como se están sacando más fotos que RPS, significa que solo hay un desfase muy pequeño.
 \\ \\
-En base a lo anterior, y aproximando grados, se obtiene lo siguiente:
+En base a lo anterior, y aproximando en grados, se obtiene lo siguiente:
 
 \begin{center}
     \begin{tabular}{|c|c|}
@@ -357,11 +355,7 @@ En base a lo anterior, y aproximando grados, se obtiene lo siguiente:
     \end{tabular}
 \end{center}
 
-Una vez determinado que se logro la sincronizacion, se intento sacar una gran canidad de fotos,
-pero el programa tiene como limite 20, donde aun se desconoce la razon. Puede ser por RAM, el SW en si mismo, etc. Aun 
-asi, el objetivo principal fue resuelto.
-
-\noindent Para finalizar, se intentó tomar una gran cantidad de fotos (300 en total), pero el código solo tomó 20.
+\noindent Una vez determinado que se logró la sincronización, se intentó sacar una gran cantidad de fotos, pero el programa tiene como límite 20, donde aún se desconoce la razón. Puede ser por la RAM, el software en sí mismo, etc. Aun así, el objetivo principal fue resuelto.
 
 \section{CONCLUSION}
 \noindent En conclusión, se logró sincronizar las cámaras con muy poco desfase, el cual siempre va a existir ya que el trigger es mediante SW, donde se corre un ciclo for. Si se hace mediante HW se podría erradicar esta diferencia, pero puede llegar a ser más costoso y complejo. Además, tomando a favor la velocidad del carbopol, se puede determinar que esta diferencia es despreciable en las mediciones.
