@@ -14,6 +14,21 @@
 \usepackage{enumitem}
 \usepackage[spanish]{babel} % Cargar el idioma español
 
+\usepackage{listings}
+
+ % Configuración del estilo de las celdas de código
+\lstset{
+  frame=single, % Agrega un marco alrededor del código
+  language=Python, % Lenguaje del código
+  basicstyle=\ttfamily\small, % Estilo básico del texto del código
+  keywordstyle=\color{blue}, % Estilo de las palabras clave
+  commentstyle=\color{green!40!black}, % Estilo de los comentarios
+  stringstyle=\color{red}, % Estilo de las cadenas de texto
+  showstringspaces=false, % No mostrar espacios en cadenas de texto
+  captionpos=b, % Posición de la leyenda (abajo)
+}
+
+\usepackage{hyperref}
 
 \title{\textbf{SINCRONIZACION CAMARAS}\\[0.5em] \large Investigacion UHPC}
 \author{Lukas Wolff Casanova}
@@ -361,6 +376,63 @@ En base a lo anterior, y aproximando en grados, se obtiene lo siguiente:
 \noindent En conclusión, se logró sincronizar las cámaras con muy poco desfase, el cual siempre va a existir ya que el trigger es mediante SW, donde se corre un ciclo for. Si se hace mediante HW se podría erradicar esta diferencia, pero puede llegar a ser más costoso y complejo. Además, tomando a favor la velocidad del carbopol, se puede determinar que esta diferencia es despreciable en las mediciones.
 \\ \\
 Finalmente, se determinó que el próximo desafío es cómo tomar y procesar un gran número de fotos.
+
+\newpage
+\section{ESTRUCTURA CODIGO}
+
+\noindent A continuación se mostrarán las partes clave del código. Primero se configuran las cámaras.
+
+\begin{lstlisting}[language=Python]
+  for i, cam in enumerate(cameras):
+    cam.Attach(tlFactory.CreateDevice(devices[i]))
+
+    cam.Open()
+    cam.AcquisitionFrameRateEnable.SetValue(True)
+
+    #Seteo FPS
+    cam.AcquisitionFrameRate.SetValue(200)
+    #Seteo exposicion
+    cam.ExposureTime.SetValue(100) 
+    cam.Close()
+\end{lstlisting}
+
+\noindent Posteriormente, se capturan las fotos, las cuales son guardadas inmediatamente en una lista en forma de array. De esta forma, se pierde el menor tiempo posible procesándolas.
+
+\begin{lstlisting}[language=Python]
+  for i in range(countOfImagesToGrab):
+    if not cameras.IsGrabbing():
+        break
+
+    R = cameras.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
+    imagenes.append(R)
+\end{lstlisting}
+
+\noindent Finalmente, se procesan los arrays para obtener la imagen, el tiempo y la cámara que la tomó. De esta forma, es posible guardar las fotos de forma ordenada en sus respectivas carpetas.
+
+\begin{lstlisting}[language=Python]
+  for i, elementos in enumerate(imagenes):
+    img = elementos.GetArray()
+    img = cv2.equalizeHist(img)
+    camara = elementos.GetCameraContext()
+    tiempo = elementos.GetTimeStamp()
+
+    folder_path = f'FOTOS/{RPM}/{camara}'
+    print(folder_path)
+
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+    file_name = f'{tiempo}.png'
+
+    file_path = os.path.join(folder_path, file_name)
+
+    image = Image.fromarray(img)
+    image.save(file_path)
+
+    print(f"Imagen guardada: {file_path}")
+\end{lstlisting}
+
+\noindent Enlace a GitHub con toda la información: \href{https://github.com/LukasWolff2002/SINCRONIZACION_CAMARAS_BASLER}{GIT-HUB-SINCRONIZACION-CAMARAS}.
 
 \end{document}
 

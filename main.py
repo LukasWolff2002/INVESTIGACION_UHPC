@@ -7,6 +7,7 @@ from PIL import Image
 import cv2
 
 #---------------------
+#DETERMINO EL NOMRE DE CARPETA
 RPM = 12055
 #---------------------
 
@@ -39,8 +40,6 @@ try:
     # Create an array of instant cameras for the found devices and avoid exceeding a maximum number of devices.
     cameras = pylon.InstantCameraArray(min(len(devices), maxCamerasToUse))
 
-    
-
     # Create and attach all Pylon Devices.
     for i, cam in enumerate(cameras):
         cam.Attach(tlFactory.CreateDevice(devices[i]))
@@ -61,7 +60,6 @@ try:
     # Grab countOfImagesToGrab from the cameras.
     for i in range(countOfImagesToGrab):
         if not cameras.IsGrabbing():
-            print('hols')
             break
         
         grabResult = cameras.RetrieveResult(5000, pylon.TimeoutHandling_ThrowException)
@@ -79,8 +77,6 @@ for i, elementos in enumerate(imagenes):
     img = cv2.equalizeHist(img)
     camara = elementos.GetCameraContext()
     tiempo = elementos.GetTimeStamp()
-    #tiempo = datetime.datetime.fromtimestamp(tiempo / 1000.0)
-    #tiempo = tiempo.strftime("%H-%M-%S-%f")  # Usamos '-' para evitar problemas con el formato del nombre del archivo
 
     # Carpeta donde se almacenarán las imágenes
     folder_path = f'FOTOS/{RPM}/{camara}'
