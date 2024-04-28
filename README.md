@@ -1,10 +1,10 @@
 ![INFOMRE](INFORME/INFORME.pdf)
 
-# Manejo de Buffers con Cámaras Basler y Pylon en Python
+# Ideas
 
 Este documento proporciona una guía detallada sobre cómo configurar y gestionar los buffers para la captura de imágenes con cámaras Basler utilizando la biblioteca Pylon en Python.
 
-## Configuración del Buffer
+## Buffer
 
 El manejo adecuado del buffer es crucial para asegurar una captura de imágenes eficiente y continua, especialmente en aplicaciones de alta velocidad.
 
