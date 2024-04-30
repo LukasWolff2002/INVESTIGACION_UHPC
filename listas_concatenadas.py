@@ -63,7 +63,7 @@ class linked_list:
 
 s = linked_list() # Instancia de la clase
 s.add_at_front(5) # Agregamos un elemento al frente del nodo
-s.add_at_end(8) # Agregamos un elemento al final del nodo
+s.add_at_front(8) # Agregamos un elemento al final del nodo
 s.add_at_front(9) # Agregamos otro elemento al frente del nodo
 
 print("La lista es")
