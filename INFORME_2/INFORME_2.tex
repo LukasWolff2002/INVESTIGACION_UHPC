@@ -16,7 +16,7 @@
 
 \usepackage{listings}
 
- % Configuración del estilo de las celdas de código
+% Configuración del estilo de las celdas de código
 \lstset{
   frame=single, % Agrega un marco alrededor del código
   language=Python, % Lenguaje del código
@@ -27,6 +27,17 @@
   showstringspaces=false, % No mostrar espacios en cadenas de texto
   captionpos=b, % Posición de la leyenda (abajo)
 }
+\lstset{
+  literate=%
+  {á}{{\'a}}1
+  {é}{{\'e}}1
+  {í}{{\'i}}1
+  {ó}{{\'o}}1
+  {ú}{{\'u}}1
+  {ñ}{{\~n}}1
+}
+
+
 
 \usepackage{hyperref}
 
@@ -39,6 +50,85 @@
 \hrule
 
 \section{INTRODUCCION}
+
+\noindent Posterior a sincronizar las camaras, se determino que la siguiente tarea era lograr sacar 5000 por camara, lo que da un rango de operacion de 25 segundos a 
+200 fps. Para poder lograrlo se postularon varias ideas como listas concatenadas, determinar el tamaño de la lista o usar el buffer de las camaras.
+
+\section{METODOLOGIA}
+
+\noindent Para comenzar se investigo sobre las listas concatenadas o listas con punteros. La diferencia que tienen con una lista normal es que en vez de estar
+almacenadas de manera conjunta en la memoria RAM, estas se almacenan los datos de forma particular, junto a un puntero que indica donde esta el siguiente
+indice, de esta manera se logra que el proceso de almacenar datos sea mucho mas eficiente en terminos de velocidad y memoria, pero tiene como contra que recorrer 
+una lista es mas lento. Tomando a favor la estructura del codigo, donde se recorre la lista una vez que las fotos ya fueron tomadas, se determino que era una
+buena herraienta a utilizar.
+\\ \\
+En primer lugar se crea la clase node, la cual permite crear y recorrer una lista concatenada, la celda mas importante del 
+codigo es la siguiente:
+\\ \\
+\begin{lstlisting}[language=Python]
+  # Método para recorrer la lista de nodos
+  def traverse(self):
+      current_node = self.head
+      
+      while current_node:
+
+          img = current_node.data.GetArray()
+          img = cv2.equalizeHist(img)
+          camara = current_node.data.GetCameraContext()
+          tiempo = current_node.data.GetTimeStamp()
+
+          # Carpeta donde se almacenarán las imágenes
+          folder_path = f'FOTOS/{RPM}/{camara}'
+          print(folder_path)
+
+          # Crear la carpeta si no existe
+          if not os.path.exists(folder_path):
+              os.makedirs(folder_path)
+
+          # Nombre del archivo de la imagen
+          file_name = f'{tiempo}.png'
+
+          # Ruta completa del archivo de la imagen
+          file_path = os.path.join(folder_path, file_name)
+
+          # Crear una imagen PIL a partir de la matriz de la imagen
+          image = Image.fromarray(img)
+
+          # Guardar la imagen como PNG
+          image.save(file_path)
+
+          print(f"Imagen guardada: {file_path}")
+          current_node = current_node.next
+\end{lstlisting}
+
+Como se puede ver, todo el proceso que se realizaba anteriormente al recorrer la lista imagenes, ahora
+se realiza dentro de la classe node, la cual es llamada al final del codigo:
+
+Posteriormente, se setean los ajustes tanto de camaras como fotos:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1714575945.32393 "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" "INFORME_2.pdf" "INFORME_2" 1714575945.98452 0
-  "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" 1714575945.14378 1626 f0ef30ad74ada3f419b2446812607d3f ""
+["pdflatex"] 1714585457.1131 "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" "INFORME_2.pdf" "INFORME_2" 1714585457.77094 0
+  "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" 1714585456.93554 4282 6d978ea6d8b2591968b571960883d370 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -10,12 +10,16 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt9.tfm" 1136768653 764 c98a2af25c99b73a368cf7336e255190 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb" 1248133631 29078 718ea4567ceff944262b0f5b0800e1d9 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel-spanish/spanish.ldf" 1622145181 26965 3b6d1655ad716f98e788b1fb9f2e87b8 ""
@@ -144,9 +148,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1710685657.15962 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1710685568 8221436 9feefa88f893c4604437a3bcd513880c ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "INFORME_2.aux" 1714575945.93364 433 339656a69b352984a9de07e3733e8d65 "pdflatex"
-  "INFORME_2.out" 1714575945.93485 103 f2258e51669fa79dca959f189219725f "pdflatex"
-  "INFORME_2.tex" 1714575945.14378 1626 f0ef30ad74ada3f419b2446812607d3f ""
+  "INFORME_2.aux" 1714585457.72096 541 3a48ce34a8515e8b09b5cc0b087bc043 "pdflatex"
+  "INFORME_2.out" 1714585457.72193 201 0d86461fd832ebc29eca3797c5a68f7b "pdflatex"
+  "INFORME_2.tex" 1714585456.93554 4282 6d978ea6d8b2591968b571960883d370 ""
   (generated)
   "INFORME_2.aux"
   "INFORME_2.log"

@@ -1,4 +1,13 @@
-# Creamos la clase node
+import matplotlib.pyplot as plt
+import os
+from pypylon import genicam, pylon
+import sys
+import datetime
+from PIL import Image
+import cv2
+import os
+
+# Creamos la clase para listas concatenadas
 class node:
     def __init__(self, data = None, next = None):
         self.data = data
@@ -88,38 +97,25 @@ class linked_list:
             print(f"Imagen guardada: {file_path}")
             current_node = current_node.next
 
-
-
-
-s = linked_list() # Instancia de la clase
-import matplotlib.pyplot as plt
-import os
-from pypylon import genicam, pylon
-import sys
-import datetime
-from PIL import Image
-import cv2
-import os
-
 #---------------------
 # DETERMINO EL NOMBRE DE CARPETA
 RPM = 12055
+
+# DETERMINO CANTIDAD DE IMAGENES A SACAR
+countOfImagesToGrab = 5000
 #---------------------
 
+buffer = 3000
 RPM = str(RPM)
 
-# Number of images to be grabbed.
-countOfImagesToGrab = 5000
-buffer = 3000
+# Se crea la lista concatenada
+s = linked_list() 
 
 # Limits the amount of cameras used for grabbing.
 maxCamerasToUse = 2
 
 # The exit code of the sample application.
 exitCode = 0
-
-imagenes = []
-
 
 try:
     # Get the transport layer factory.
@@ -159,6 +155,7 @@ try:
     print(' ')
 
     #----------------------
+    # Disparo las camaras
     cameras.StartGrabbing()
     #----------------------
     
@@ -166,20 +163,17 @@ try:
     for i in range(countOfImagesToGrab):
         if not cameras.IsGrabbing():
             break
-        #print('saco foto')
+
+        #recibo la foto y la guardo como array y en la lista concatenada
         grabResult = cameras.RetrieveResult(40000, pylon.TimeoutHandling_ThrowException)
         s.add_at_front(grabResult)
         
-               
-                    
-
 finally:
     for cam in cameras:
         cam.StopGrabbing()
         cam.Close()
 
-
-# Save grabbed images
+'''
 for i, img in enumerate(imagenes):
     print("foto", i)
     img = img.GetArray()
@@ -208,8 +202,10 @@ for i, img in enumerate(imagenes):
 
     # Guardar la imagen como PNG
     image.save(file_path)
+'''
 
-    #print(f"Imagen guardada: {file_path}")
 s.traverse()
 print("Fotos Guardadas")
+
+# Para probar codigo y borrar fotos automaticamente en mac activar este comando
 #os.system('rm -r FOTOS')
