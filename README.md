@@ -15,7 +15,7 @@ El proceso detallado se encuentra en el siguiente informe:
 
 Posterior a sincronizar las camaras, se observo que el codigo permitia sacar como maximo 20 fotos. En base a lo anterior, se optimizo el codigo utilizando listas concatenadas y el buffer de cada camara.
 
-![CODIGO MULTIPLES DISPAROS SINCRONIZADOS](MULTIPLES_DISPAROS_SINCRNIZADOS.py)
+![CODIGO MULTIPLES DISPAROS SINCRONIZADOS](MULTIPLES_DISPAROS_SINCRONIZADOS.py)
 
 El proceso detallado se encuentra en el siguiente informe:
 
