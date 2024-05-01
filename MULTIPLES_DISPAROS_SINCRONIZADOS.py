@@ -57,13 +57,9 @@ class linked_list:
     # Método para recorrer la lista de nodos
     def traverse(self):
         current_node = self.head
-        i = 0
+        
         while current_node:
 
-            if i == 2:
-                break
-
-            i += 1
             img = current_node.data.GetArray()
             img = cv2.equalizeHist(img)
             camara = current_node.data.GetCameraContext()
@@ -216,4 +212,4 @@ for i, img in enumerate(imagenes):
     #print(f"Imagen guardada: {file_path}")
 s.traverse()
 print("Fotos Guardadas")
-os.system('rm -r FOTOS')
+#os.system('rm -r FOTOS')

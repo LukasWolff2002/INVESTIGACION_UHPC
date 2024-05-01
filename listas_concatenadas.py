@@ -61,6 +61,9 @@ class linked_list:
             print(current_node.data)
             current_node = current_node.next
 
+    def clear(self):
+        self.head = None
+
 s = linked_list() # Instancia de la clase
 s.add_at_front(5) # Agregamos un elemento al frente del nodo
 s.add_at_front(8) # Agregamos un elemento al final del nodo
@@ -74,4 +77,14 @@ print("Donde la puedo recorrer")
 print(" ")
 s.traverse()
 
+s.clear()
+print(s)
+
+s.add_at_front(5) # Agregamos un elemento al frente del nodo
+s.add_at_front(8) # Agregamos un elemento al final del nodo
+s.add_at_front(9) # Agregamos otro elemento al frente del nodo
+
+print("La lista es")
+print(" ")
+s.print_list() # Imprimimos la lista de nodos
 
