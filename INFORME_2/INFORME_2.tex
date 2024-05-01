@@ -62,9 +62,11 @@ indice, de esta manera se logra que el proceso de almacenar datos sea mucho mas 
 una lista es mas lento. Tomando a favor la estructura del codigo, donde se recorre la lista una vez que las fotos ya fueron tomadas, se determino que era una
 buena herraienta a utilizar.
 \\ \\
+Ademas, se activo el buffer de la camara, el cual de igual manera envia unaq foto por ciclo al computador, pero ayuda a que la camara no se sature.
+\\ \\
 En primer lugar se crea la clase node, la cual permite crear y recorrer una lista concatenada, la celda mas importante del 
 codigo es la siguiente:
-\\ \\
+
 \begin{lstlisting}[language=Python]
   # Método para recorrer la lista de nodos
   def traverse(self):
@@ -101,12 +103,77 @@ codigo es la siguiente:
           current_node = current_node.next
 \end{lstlisting}
 
-Como se puede ver, todo el proceso que se realizaba anteriormente al recorrer la lista imagenes, ahora
+\noindent Como se puede ver, todo el proceso que se realizaba anteriormente al recorrer la lista imagenes, ahora
 se realiza dentro de la classe node, la cual es llamada al final del codigo:
-
+\\ \\
 Posteriormente, se setean los ajustes tanto de camaras como fotos:
 
+\begin{lstlisting}
+  #---------------------
+  # DETERMINO EL NOMBRE DE CARPETA
+  RPM = 12055
 
+  # DETERMINO CANTIDAD DE IMAGENES A SACAR
+  countOfImagesToGrab = 5000
+  #---------------------
+\end{lstlisting}
+
+Donde el directorio final de las fotos sera el siguiente:
+
+\begin{center}
+  FOTOS/RPM/numero-camara/tiempo-foto.jpg
+\end{center}
+
+Posteriormente, se configuran las camaras:
+
+\begin{lstlisting}
+  # Create and attach all Pylon Devices.
+  for i, cam in enumerate(cameras):
+      
+    cam.Attach(tlFactory.CreateDevice(devices[i]))
+
+    # Open the camera to set parameters
+    cam.Open()
+
+    # Buffer Size Adjustment
+    cam.MaxNumBuffer = buffer  # Adjust buffer size as needed
+    
+    # Configure camera settings
+    cam.AcquisitionFrameRateEnable.SetValue(True)
+    cam.AcquisitionFrameRate.SetValue(200)
+    cam.ExposureTime.SetValue(100) 
+
+    # Close the camera after setting parameters
+    cam.Close()
+\end{lstlisting}
+
+Comienza el trigger:
+
+\begin{lstlisting}
+  #----------------------
+  # Disparo las camaras
+  cameras.StartGrabbing()
+  #----------------------
+\end{lstlisting}
+
+Y se almacenan las fotos:
+
+\begin{lstlisting}
+  for i in range(countOfImagesToGrab):
+    if not cameras.IsGrabbing():
+        break
+
+    #recibo la foto y la guardo como array y en la lista concatenada
+    R = cameras.RetrieveResult(40000, pylon.TimeoutHandling_ThrowException)
+    s.add_at_front(R)
+\end{lstlisting}
+
+Finalmente, se recorre la lista:
+
+\begin{lstlisting}
+  s.traverse()
+  print("Fotos Guardadas")
+\end{lstlisting}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  1 MAY 2024 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  1 MAY 2024 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -528,28 +528,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 50.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--68
+Underfull \hbox (badness 10000) in paragraph at lines 59--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--68
+Underfull \hbox (badness 10000) in paragraph at lines 59--69
 
  []
 
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 136--139
+Underfull \hbox (badness 10000) in paragraph at lines 106--110
 
  []
 
-[2] (./INFORME_2.aux
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+[3] (./INFORME_2.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -561,18 +561,18 @@ Package rerunfilecheck Info: File `INFORME_2.out' has not changed.
 (rerunfilecheck)             Checksum: 0D86461FD832EBC29ECA3797C5A68F7B;201.
  ) 
 Here is how much of TeX's memory you used:
- 23333 strings out of 474116
- 428767 string characters out of 5743682
- 1970187 words of memory out of 5000000
- 45311 multiletter control sequences out of 15000+600000
+ 23402 strings out of 474116
+ 429748 string characters out of 5743682
+ 1990187 words of memory out of 5000000
+ 45336 multiletter control sequences out of 15000+600000
  562650 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,6n,93p,460b,2147s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on INFORME_2.pdf (2 pages, 67987 bytes).
+Output written on INFORME_2.pdf (3 pages, 74636 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 39 named destinations out of 1000 (max. 500000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 83 named destinations out of 1000 (max. 500000)
  29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
