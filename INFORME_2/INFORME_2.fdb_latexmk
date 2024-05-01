@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1714595487.31484 "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" "INFORME_2.pdf" "INFORME_2" 1714595488.00253 0
-  "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" 1714595487.08752 5970 3fafe726633687427a5bcaa7a510767e ""
+["pdflatex"] 1714598688.80833 "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" "INFORME_2.pdf" "INFORME_2" 1714598689.49209 0
+  "/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex" 1714598688.63046 5966 e788b1706a476edf7c1aacc0ebde290a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -148,9 +148,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1710685657.15962 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1710685568 8221436 9feefa88f893c4604437a3bcd513880c ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "INFORME_2.aux" 1714595487.95067 541 9fb2ada64139a024148de32881d6cf0b "pdflatex"
-  "INFORME_2.out" 1714595487.95183 201 0d86461fd832ebc29eca3797c5a68f7b "pdflatex"
-  "INFORME_2.tex" 1714595487.08752 5970 3fafe726633687427a5bcaa7a510767e ""
+  "INFORME_2.aux" 1714598689.4414 541 9fb2ada64139a024148de32881d6cf0b "pdflatex"
+  "INFORME_2.out" 1714598689.44255 201 0d86461fd832ebc29eca3797c5a68f7b "pdflatex"
+  "INFORME_2.tex" 1714598688.63046 5966 e788b1706a476edf7c1aacc0ebde290a ""
   (generated)
   "INFORME_2.aux"
   "INFORME_2.log"
