@@ -21,3 +21,11 @@ El proceso detallado se encuentra en el siguiente informe:
 
 ![DISPAROS SINCRONIZADOS](INFORME_2/INFORME_2.pdf)
 
+## Calibrar Camras
+
+Para poder calibrar las camaras en terminos de posicion y enfoque se utiliza el siguiente codigo:
+
+![CALIBRAR CAMARAS](CALIBRAR_CAMARAS.py)
+
+#nota: aun no se termina de optimizar, ya que es un codigo reciclado, ademas, una opcion es implementarlo en el codigo final.
+
