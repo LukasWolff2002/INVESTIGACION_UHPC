@@ -57,7 +57,7 @@ print(nombre_elemento_1)
 nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/1', 999)
 print(nombre_elemento_1)
 
-nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/0', 1000)
+nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/0', 1001)
 print(nombre_elemento_1)
 
 nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/1', 1000)
