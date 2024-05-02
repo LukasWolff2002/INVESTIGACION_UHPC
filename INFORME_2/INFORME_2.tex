@@ -51,21 +51,21 @@
 
 \section{INTRODUCCION}
 
-\noindent Posterior a sincronizar las camaras, se determino que la siguiente tarea era lograr sacar 5000 por camara, lo que da un rango de operacion de 25 segundos a 
-200 fps. Para poder lograrlo se postularon varias ideas como listas concatenadas, determinar el tamaño de la lista o usar el buffer de las camaras.
+\noindent Posterior a sincronizar las cámaras, se determinó que la siguiente tarea era lograr sacar 5000 por cámara, lo que da un rango de operación de 25 segundos a 
+200 fps. Para poder lograrlo se postularon varias ideas como listas concatenadas, determinar el tamaño de la lista o usar el buffer de las cámaras.
 
-\section{METODOLOGIA}
+\section{METODOLOGÍA}
 
-\noindent Para comenzar se investigo sobre las listas concatenadas o listas con punteros. La diferencia que tienen con una lista normal es que en vez de estar
-almacenadas de manera conjunta en la memoria RAM, estas se almacenan los datos de forma particular, junto a un puntero que indica donde esta el siguiente
-indice, de esta manera se logra que el proceso de almacenar datos sea mucho mas eficiente en terminos de velocidad y memoria, pero tiene como contra que recorrer 
-una lista es mas lento. Tomando a favor la estructura del codigo, donde se recorre la lista una vez que las fotos ya fueron tomadas, se determino que era una
-buena herraienta a utilizar.
+\noindent Para comenzar se investigó sobre las listas concatenadas o listas con punteros. La diferencia que tienen con una lista normal es que en vez de estar
+almacenadas de manera conjunta en la memoria RAM, estos datos se almacenan de forma particular, junto a un puntero que indica dónde está el siguiente
+índice, de esta manera se logra que el proceso de almacenar datos sea mucho más eficiente en términos de velocidad y memoria, pero tiene como contra que recorrer 
+una lista es más lento. Tomando a favor la estructura del código, donde se recorre la lista una vez que las fotos ya fueron tomadas, se determinó que era una
+buena herramienta a utilizar.
 \\ \\
-Ademas, se activo el buffer de la camara, el cual de igual manera envia unaq foto por ciclo al computador, pero ayuda a que la camara no se sature.
+Además, se activó el buffer de la cámara, el cual de igual manera envía una foto por ciclo al computador, pero ayuda a que la cámara no se sature.
 \\ \\
-En primer lugar se crea la clase node, la cual permite crear y recorrer una lista concatenada, la celda mas importante del 
-codigo es la siguiente:
+En primer lugar se crea la clase \textit{node}, la cual permite crear y recorrer una lista concatenada. La celda más importante del 
+código es la siguiente:
 
 \begin{lstlisting}[language=Python]
   # Método para recorrer la lista de nodos
@@ -103,10 +103,10 @@ codigo es la siguiente:
           current_node = current_node.next
 \end{lstlisting}
 
-\noindent Como se puede ver, todo el proceso que se realizaba anteriormente al recorrer la lista imagenes, ahora
-se realiza dentro de la classe node, la cual es llamada al final del codigo:
+\noindent Como se puede ver, todo el proceso que se realizaba anteriormente al recorrer la lista de imágenes, ahora
+se realiza dentro de la clase \textit{node}, la cual es llamada al final del código:
 \\ \\
-Posteriormente, se setean los ajustes tanto de camaras como fotos:
+Posteriormente, se configuran los ajustes tanto de cámaras como de fotos:
 
 \begin{lstlisting}
   #---------------------
@@ -118,13 +118,13 @@ Posteriormente, se setean los ajustes tanto de camaras como fotos:
   #---------------------
 \end{lstlisting}
 
-Donde el directorio final de las fotos sera el siguiente:
+\noindent Donde el directorio final de las fotos será el siguiente:
 
 \begin{center}
   FOTOS/RPM/numero-camara/tiempo-foto.jpg
 \end{center}
 
-Posteriormente, se configuran las camaras:
+\noindent Posteriormente, se configuran las cámaras:
 
 \begin{lstlisting}
   # Create and attach all Pylon Devices.
@@ -147,7 +147,8 @@ Posteriormente, se configuran las camaras:
     cam.Close()
 \end{lstlisting}
 
-Comienza el trigger:
+\newpage
+\noindent Comienza el \textit{trigger}:
 
 \begin{lstlisting}
   #----------------------
@@ -156,7 +157,7 @@ Comienza el trigger:
   #----------------------
 \end{lstlisting}
 
-Y se almacenan las fotos:
+\noindent Y se almacenan las fotos:
 
 \begin{lstlisting}
   for i in range(countOfImagesToGrab):
@@ -168,346 +169,308 @@ Y se almacenan las fotos:
     s.add_at_front(R)
 \end{lstlisting}
 
-Finalmente, se recorre la lista:
+\noindent Finalmente, se recorre la lista:
 
 \begin{lstlisting}
   s.traverse()
   print("Fotos Guardadas")
 \end{lstlisting}
 
+\newpage
+\section{RESULTADOS}
 
-FOTOS MOMENTO INICIAL
+\noindent Se hizo una toma de 10,000 fotos en total a 200 fps, lo que equivale a 5,000 fotos por cámara. A continuación se presentan los resultados cada 1,000 fotos para
+demostrar que se mantiene la sincronización
+
+\subsection{MOMENTO INICIAL}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/846596744730.png}
     \caption{Imagen 0 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/854397768249.png}
     \caption{Imagen 0 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/846601745022.png}
     \caption{Imagen 1 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/854402768568.png}
     \caption{Imagen 1 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 1000
+\subsection{FOTOS 1000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/849096897507.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 500 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/856897921026.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 500 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/849101897799.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 501 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/856902921345.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 501 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 2000
-
-SE OBSERVA UN CAMBIO
+\subsection{FOTOS 2000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/851592049965.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 1000 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/859393073511.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 999 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/851597050284.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 1001 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/859398073803.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 1000 camara 1}
   \end{minipage}
 \end{figure}
 
+\noindent En este caso se puede observar que el índice de la cámara 1 disminuye en 1, lo cual indica que la cámara 1 tiene una foto extra en el intervalo [1000-2000].
 
-FOTOS 3000
+\subsection{FOTOS 3000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/854092202742.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 1500 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/861893226288.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 1499 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/854097203061.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 1501 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/861898226580.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 1500 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 4000
+\subsection{FOTOS 4000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/856592355519.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 2000 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/864393379065.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 1999 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/856597355838.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 2001 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/864398379357.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 2000 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 5000
+\subsection{FOTOS 5000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/859092508323.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 2500 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/866893531842.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 2499 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/859097508615.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 2501 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/866898532161.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 2500 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 6000
+\subsection{FOTOS 6000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/861592661073.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 3000 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/869393684619.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 2999 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/861597661392.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 3001 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/869398684911.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 3000 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 7000
+\subsection{FOTOS 7000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/864092813850.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 3500 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/871893837396.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 3499 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/864097814169.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 3501 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/871898837688.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 3500 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 8000
+\subsection{FOTOS 8000}
 
 \begin{figure}[H]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/866592966654.png}
-    \caption{Imagen 0 camara 0}
+    \caption{Imagen 4000 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/874393990173.png}
-    \caption{Imagen 0 camara 1}
+    \caption{Imagen 3999 camara 1}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/0/866597966946.png}
-    \caption{Imagen 1 camara 0}
+    \caption{Imagen 4001 camara 0}
   \end{minipage}
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.8
+    \includegraphics[width=0.6
     \textwidth]{FOTOS/8362/1/874398990492.png}
-    \caption{Imagen 1 camara 1}
+    \caption{Imagen 4000 camara 1}
   \end{minipage}
 \end{figure}
 
-FOTOS 9000
+\subsection{FOTOS 9000}
 
-\begin{figure}[H]
-  \centering
-  \begin{minipage}[b]{0.45\textwidth}
-    \centering
-    \includegraphics[width=0.8
-    \textwidth]{FOTOS/8362/0/876899143269.png}
-    \caption{Imagen 0 camara 0}
-  \end{minipage}
-  \begin{minipage}[b]{0.45\textwidth}
-    \centering
-    \includegraphics[width=0.8
-    \textwidth]{FOTOS/8362/1/869093119431.png}
-    \caption{Imagen 0 camara 1}
-  \end{minipage}
-  \begin{minipage}[b]{0.45\textwidth}
-    \centering
-    \includegraphics[width=0.8
-    \textwidth]{FOTOS/8362/0/876904143561.png}
-    \caption{Imagen 1 camara 0}
-  \end{minipage}
-  \begin{minipage}[b]{0.45\textwidth}
-    \centering
-    \includegraphics[width=0.8
-    \textwidth]{FOTOS/8362/1/869098119723.png}
-    \caption{Imagen 1 camara 1}
-  \end{minipage}
-\end{figure}
+\noindent Es curioso este caso, ya que al hacer un código que busque las fotos 9000, si encuentra su presencia en las carpetas, pero luego al agregarlas en el informe.tex,
+este no logra encontrarlas, por lo que quizás no se logró su interpretación de array a imagen de manera correcta.
 
+\subsection{ANALISIS}
 
+\noindent Se puede observar claramente que la sincronización se mantiene a lo largo de las tomas, ahora bien, hay que tener precaución con el análisis de imágenes y la pérdida de datos,
+por lo que será necesario modificar o crear un código que analice el desfase entre fotos, y sea capaz de determinar si hay fotos extra o vacíos. 
 
- 
+\section{CONCLUSION}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\noindent En conclusión, se logró el objetivo principal de sacar 10,000 fotos, ahora bien, surgieron ciertos detalles que hay que arreglar. De todas formas, ya existe una buena
+base donde se puede empezar a trabajar para la implementación del PTV a medida que se arreglan los detalles finales.
+\\ \\
+Finalmente, la siguiente gran tarea es comenzar a aprender e implementar el uso de PTV, además de arreglar los detalles antes mencionados.
+\\ \\
 \noindent Enlace a GitHub con toda la información: \href{https://github.com/LukasWolff2002/SINCRONIZACION_CAMARAS_BASLER}{GIT-HUB-INVESTIGACION-UHPC}.
 \\ \\
 \noindent Enlace a GitHub con codigo base: : \href{https://github.com/basler/pypylon/blob/master/samples/grabmultiplecameras.py}{GIT-HUB-CODIGO-BASE}.
