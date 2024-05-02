@@ -39,13 +39,13 @@ print("1000")
 nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/0', 500)
 print(nombre_elemento_1)
 
-nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/1', 500)
+nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/1', 499)
 print(nombre_elemento_1)
 
 nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/0', 501)
 print(nombre_elemento_1)
 
-nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/1', 501)
+nombre_elemento_1 = obtener_nombre_elemento('INFORME_2/FOTOS/8362/1', 500)
 print(nombre_elemento_1)
 print(' ')
 
