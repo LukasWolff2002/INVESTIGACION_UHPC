@@ -99,13 +99,13 @@ class linked_list:
 
 #---------------------
 # DETERMINO EL NOMBRE DE CARPETA
-RPM = 12055
+RPM = 8362
 
 # DETERMINO CANTIDAD DE IMAGENES A SACAR
-countOfImagesToGrab = 5000
+countOfImagesToGrab = 10000
 #---------------------
 
-buffer = 3000
+buffer = 5000
 RPM = str(RPM)
 
 # Se crea la lista concatenada
@@ -172,37 +172,6 @@ finally:
     for cam in cameras:
         cam.StopGrabbing()
         cam.Close()
-
-'''
-for i, img in enumerate(imagenes):
-    print("foto", i)
-    img = img.GetArray()
-    img = cv2.equalizeHist(img)
-    tiempo = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
-    camara = i  # Simulated camera context as index, modify according to your application
-
-    #camara = camara % 2
-
-    # Carpeta donde se almacenarán las imágenes
-    folder_path = f'FOTOS/{RPM}/{camara}'
-    #print(folder_path)
-
-    # Crear la carpeta si no existe
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
-
-    # Nombre del archivo de la imagen
-    file_name = f'{tiempo}.png'
-
-    # Ruta completa del archivo de la imagen
-    file_path = os.path.join(folder_path, file_name)
-
-    # Crear una imagen PIL a partir de la matriz de la imagen
-    image = Image.fromarray(img)
-
-    # Guardar la imagen como PNG
-    image.save(file_path)
-'''
 
 s.traverse()
 print("Fotos Guardadas")

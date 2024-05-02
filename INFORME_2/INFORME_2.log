@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  1 MAY 2024 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.17)  2 MAY 2024 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -436,10 +436,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip51
-) (./INFORME_2.aux
-LaTeX Info: Redefining \. on input line 11.
-LaTeX Info: Redefining \% on input line 11.
-)
+) (./INFORME_2.aux)
 \openout1 = `INFORME_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -517,7 +514,6 @@ LaTeX Info: Redefining \. on input line 47.
 LaTeX Info: Redefining \% on input line 47.
 \c@lstlisting=\count322
 Package hyperref Info: Link coloring OFF on input line 47.
-(./INFORME_2.out) (./INFORME_2.out)
 \@outlinefile=\write4
 \openout4 = `INFORME_2.out'.
 
@@ -545,11 +541,257 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--110
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 203--206
+<FOTOS/8362/0/846596744730.png, id=86, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/846596744730.png Graphic file (type png)
+<use FOTOS/8362/0/846596744730.png>
+Package pdftex.def Info: FOTOS/8362/0/846596744730.png  used on input line 186.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/854397768249.png, id=87, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/854397768249.png Graphic file (type png)
+<use FOTOS/8362/1/854397768249.png>
+Package pdftex.def Info: FOTOS/8362/1/854397768249.png  used on input line 192.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/846601745022.png, id=88, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/846601745022.png Graphic file (type png)
+<use FOTOS/8362/0/846601745022.png>
+Package pdftex.def Info: FOTOS/8362/0/846601745022.png  used on input line 198.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/854402768568.png, id=89, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/854402768568.png Graphic file (type png)
+<use FOTOS/8362/1/854402768568.png>
+Package pdftex.def Info: FOTOS/8362/1/854402768568.png  used on input line 204.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/849096897507.png, id=90, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/849096897507.png Graphic file (type png)
+<use FOTOS/8362/0/849096897507.png>
+Package pdftex.def Info: FOTOS/8362/0/849096897507.png  used on input line 216.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/856897921026.png, id=91, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/856897921026.png Graphic file (type png)
+<use FOTOS/8362/1/856897921026.png>
+Package pdftex.def Info: FOTOS/8362/1/856897921026.png  used on input line 222.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/849101897799.png, id=92, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/849101897799.png Graphic file (type png)
+<use FOTOS/8362/0/849101897799.png>
+Package pdftex.def Info: FOTOS/8362/0/849101897799.png  used on input line 228.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/856902921345.png, id=93, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/856902921345.png Graphic file (type png)
+<use FOTOS/8362/1/856902921345.png>
+Package pdftex.def Info: FOTOS/8362/1/856902921345.png  used on input line 234.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+ [3 <./FOTOS/8362/0/846596744730.png (PNG copy)> <./FOTOS/8362/1/854397768249.png (PNG copy)> <./FOTOS/8362/0/846601745022.png (PNG copy)> <./FOTOS/8362/1/854402768568.png (PNG copy)>]
+<FOTOS/8362/0/851592049965.png, id=115, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/851592049965.png Graphic file (type png)
+<use FOTOS/8362/0/851592049965.png>
+Package pdftex.def Info: FOTOS/8362/0/851592049965.png  used on input line 248.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/859393073511.png, id=116, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/859393073511.png Graphic file (type png)
+<use FOTOS/8362/1/859393073511.png>
+Package pdftex.def Info: FOTOS/8362/1/859393073511.png  used on input line 254.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/851597050284.png, id=117, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/851597050284.png Graphic file (type png)
+<use FOTOS/8362/0/851597050284.png>
+Package pdftex.def Info: FOTOS/8362/0/851597050284.png  used on input line 260.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/859398073803.png, id=118, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/859398073803.png Graphic file (type png)
+<use FOTOS/8362/1/859398073803.png>
+Package pdftex.def Info: FOTOS/8362/1/859398073803.png  used on input line 266.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/854092202742.png, id=119, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/854092202742.png Graphic file (type png)
+<use FOTOS/8362/0/854092202742.png>
+Package pdftex.def Info: FOTOS/8362/0/854092202742.png  used on input line 279.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/861893226288.png, id=120, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/861893226288.png Graphic file (type png)
+<use FOTOS/8362/1/861893226288.png>
+Package pdftex.def Info: FOTOS/8362/1/861893226288.png  used on input line 285.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/854097203061.png, id=121, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/854097203061.png Graphic file (type png)
+<use FOTOS/8362/0/854097203061.png>
+Package pdftex.def Info: FOTOS/8362/0/854097203061.png  used on input line 291.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/861898226580.png, id=122, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/861898226580.png Graphic file (type png)
+<use FOTOS/8362/1/861898226580.png>
+Package pdftex.def Info: FOTOS/8362/1/861898226580.png  used on input line 297.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+ [4 <./FOTOS/8362/0/849096897507.png (PNG copy)> <./FOTOS/8362/1/856897921026.png (PNG copy)> <./FOTOS/8362/0/849101897799.png (PNG copy)> <./FOTOS/8362/1/856902921345.png (PNG copy)> <./FOTOS/8362/0/851592049965.png (PNG copy)> <./FOTOS/8362/1/859393073511.png (PNG copy)> <./FOTOS/8362/0/851597050284.png (PNG copy)> <./FOTOS/8362/1/859398073803.png (PNG copy)>]
+<FOTOS/8362/0/856592355519.png, id=136, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/856592355519.png Graphic file (type png)
+<use FOTOS/8362/0/856592355519.png>
+Package pdftex.def Info: FOTOS/8362/0/856592355519.png  used on input line 309.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/864393379065.png, id=137, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/864393379065.png Graphic file (type png)
+<use FOTOS/8362/1/864393379065.png>
+Package pdftex.def Info: FOTOS/8362/1/864393379065.png  used on input line 315.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/856597355838.png, id=138, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/856597355838.png Graphic file (type png)
+<use FOTOS/8362/0/856597355838.png>
+Package pdftex.def Info: FOTOS/8362/0/856597355838.png  used on input line 321.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/864398379357.png, id=139, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/864398379357.png Graphic file (type png)
+<use FOTOS/8362/1/864398379357.png>
+Package pdftex.def Info: FOTOS/8362/1/864398379357.png  used on input line 327.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/859092508323.png, id=140, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/859092508323.png Graphic file (type png)
+<use FOTOS/8362/0/859092508323.png>
+Package pdftex.def Info: FOTOS/8362/0/859092508323.png  used on input line 339.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/866893531842.png, id=141, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/866893531842.png Graphic file (type png)
+<use FOTOS/8362/1/866893531842.png>
+Package pdftex.def Info: FOTOS/8362/1/866893531842.png  used on input line 345.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/859097508615.png, id=142, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/859097508615.png Graphic file (type png)
+<use FOTOS/8362/0/859097508615.png>
+Package pdftex.def Info: FOTOS/8362/0/859097508615.png  used on input line 351.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/866898532161.png, id=143, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/866898532161.png Graphic file (type png)
+<use FOTOS/8362/1/866898532161.png>
+Package pdftex.def Info: FOTOS/8362/1/866898532161.png  used on input line 357.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+ [5 <./FOTOS/8362/0/854092202742.png (PNG copy)> <./FOTOS/8362/1/861893226288.png (PNG copy)> <./FOTOS/8362/0/854097203061.png (PNG copy)> <./FOTOS/8362/1/861898226580.png (PNG copy)> <./FOTOS/8362/0/856592355519.png (PNG copy)> <./FOTOS/8362/1/864393379065.png (PNG copy)> <./FOTOS/8362/0/856597355838.png (PNG copy)> <./FOTOS/8362/1/864398379357.png (PNG copy)>]
+<FOTOS/8362/0/861592661073.png, id=156, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/861592661073.png Graphic file (type png)
+<use FOTOS/8362/0/861592661073.png>
+Package pdftex.def Info: FOTOS/8362/0/861592661073.png  used on input line 369.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/869393684619.png, id=157, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/869393684619.png Graphic file (type png)
+<use FOTOS/8362/1/869393684619.png>
+Package pdftex.def Info: FOTOS/8362/1/869393684619.png  used on input line 375.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/861597661392.png, id=158, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/861597661392.png Graphic file (type png)
+<use FOTOS/8362/0/861597661392.png>
+Package pdftex.def Info: FOTOS/8362/0/861597661392.png  used on input line 381.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/869398684911.png, id=159, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/869398684911.png Graphic file (type png)
+<use FOTOS/8362/1/869398684911.png>
+Package pdftex.def Info: FOTOS/8362/1/869398684911.png  used on input line 387.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/864092813850.png, id=160, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/864092813850.png Graphic file (type png)
+<use FOTOS/8362/0/864092813850.png>
+Package pdftex.def Info: FOTOS/8362/0/864092813850.png  used on input line 399.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/871893837396.png, id=161, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/871893837396.png Graphic file (type png)
+<use FOTOS/8362/1/871893837396.png>
+Package pdftex.def Info: FOTOS/8362/1/871893837396.png  used on input line 405.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/864097814169.png, id=162, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/864097814169.png Graphic file (type png)
+<use FOTOS/8362/0/864097814169.png>
+Package pdftex.def Info: FOTOS/8362/0/864097814169.png  used on input line 411.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/871898837688.png, id=163, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/871898837688.png Graphic file (type png)
+<use FOTOS/8362/1/871898837688.png>
+Package pdftex.def Info: FOTOS/8362/1/871898837688.png  used on input line 417.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+ [6 <./FOTOS/8362/0/859092508323.png (PNG copy)> <./FOTOS/8362/1/866893531842.png (PNG copy)> <./FOTOS/8362/0/859097508615.png (PNG copy)> <./FOTOS/8362/1/866898532161.png (PNG copy)> <./FOTOS/8362/0/861592661073.png (PNG copy)> <./FOTOS/8362/1/869393684619.png (PNG copy)> <./FOTOS/8362/0/861597661392.png (PNG copy)> <./FOTOS/8362/1/869398684911.png (PNG copy)>]
+<FOTOS/8362/0/866592966654.png, id=176, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/866592966654.png Graphic file (type png)
+<use FOTOS/8362/0/866592966654.png>
+Package pdftex.def Info: FOTOS/8362/0/866592966654.png  used on input line 429.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/874393990173.png, id=177, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/874393990173.png Graphic file (type png)
+<use FOTOS/8362/1/874393990173.png>
+Package pdftex.def Info: FOTOS/8362/1/874393990173.png  used on input line 435.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/0/866597966946.png, id=178, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/0/866597966946.png Graphic file (type png)
+<use FOTOS/8362/0/866597966946.png>
+Package pdftex.def Info: FOTOS/8362/0/866597966946.png  used on input line 441.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+<FOTOS/8362/1/874398990492.png, id=179, 1445.4pt x 1084.05pt>
+File: FOTOS/8362/1/874398990492.png Graphic file (type png)
+<use FOTOS/8362/1/874398990492.png>
+Package pdftex.def Info: FOTOS/8362/1/874398990492.png  used on input line 447.
+(pdftex.def)             Requested size: 157.24448pt x 117.92256pt.
+
+
+LaTeX Warning: File `FOTOS/8362/0/876899143269.png' not found on input line 459.
+
+
+/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex:459: Package pdftex.def Error: File `FOTOS/8362/0/876899143269.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 ...textwidth]{FOTOS/8362/0/876899143269.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `FOTOS/8362/1/869093119431.png' not found on input line 465.
+
+
+/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex:465: Package pdftex.def Error: File `FOTOS/8362/1/869093119431.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.465 ...textwidth]{FOTOS/8362/1/869093119431.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `FOTOS/8362/0/876904143561.png' not found on input line 471.
+
+
+/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex:471: Package pdftex.def Error: File `FOTOS/8362/0/876904143561.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 ...textwidth]{FOTOS/8362/0/876904143561.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `FOTOS/8362/1/869098119723.png' not found on input line 477.
+
+
+/Users/lukaswolff/Desktop/PIV/SINCRONIZACION_CAMARAS_BASLER/INFORME_2/INFORME_2.tex:477: Package pdftex.def Error: File `FOTOS/8362/1/869098119723.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.477 ...textwidth]{FOTOS/8362/1/869098119723.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[7 <./FOTOS/8362/0/864092813850.png (PNG copy)> <./FOTOS/8362/1/871893837396.png (PNG copy)> <./FOTOS/8362/0/864097814169.png (PNG copy)> <./FOTOS/8362/1/871898837688.png (PNG copy)> <./FOTOS/8362/0/866592966654.png (PNG copy)> <./FOTOS/8362/1/874393990173.png (PNG copy)> <./FOTOS/8362/0/866597966946.png (PNG copy)> <./FOTOS/8362/1/874398990492.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 511--514
 
  []
 
-[3] (./INFORME_2.aux
+[8] (./INFORME_2.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -557,22 +799,29 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `INFORME_2.out' has not changed.
-(rerunfilecheck)             Checksum: 0D86461FD832EBC29ECA3797C5A68F7B;201.
+
+
+Package rerunfilecheck Warning: File `INFORME_2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `INFORME_2.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  0D86461FD832EBC29ECA3797C5A68F7B;201.
  ) 
 Here is how much of TeX's memory you used:
- 23402 strings out of 474116
- 429748 string characters out of 5743682
+ 23818 strings out of 474116
+ 443907 string characters out of 5743682
  1990187 words of memory out of 5000000
- 45336 multiletter control sequences out of 15000+600000
+ 45711 multiletter control sequences out of 15000+600000
  562650 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,460b,2147s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on INFORME_2.pdf (3 pages, 74722 bytes).
+ 84i,8n,93p,460b,2147s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on INFORME_2.pdf (8 pages, 40551255 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 83 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 128 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
