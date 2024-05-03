@@ -27,6 +27,6 @@ Para poder calibrar las cámaras en términos de posición y enfoque se utiliza 
 
 [CALIBRAR CAMARAS](CALIBRAR_CAMARAS.py)
 
-# Nota: Aún no se termina de optimizar, ya que es un código reciclado, además, una opción es implementarlo en el código final.
+#Nota: Aún no se termina de optimizar, ya que es un código reciclado, además, una opción es implementarlo en el código final.
 
 
