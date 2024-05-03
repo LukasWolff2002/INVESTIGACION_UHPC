@@ -1,9 +1,9 @@
-# Sincronizacion Camaras Basler
+# Sincronización Cámaras Basler
 
 ## Tarea 1
 
-En primer lugar, se planteo el objetivo de sincronizar las camaras para poder hacer una grabacion tridimencional. De este modo, las camaras debian sacar
-fotos al mismo instante, para lo cual se desarrollo un codigo python por medio de la libreria pypylon.
+En primer lugar, se planteó el objetivo de sincronizar las cámaras para poder hacer una grabación tridimensional. De este modo, las cámaras debían sacar
+fotos al mismo instante, para lo cual se desarrolló un código Python por medio de la librería Pypylon.
 
 [CODIGO SINCRONIZACION CAMARAS](SINCRONIZACION_CAMARAS.py)
 
@@ -13,7 +13,7 @@ El proceso detallado se encuentra en el siguiente informe:
 
 ## Tarea 2
 
-Posterior a sincronizar las camaras, se observo que el codigo permitia sacar como maximo 20 fotos. En base a lo anterior, se optimizo el codigo utilizando listas concatenadas y el buffer de cada camara.
+Posterior a sincronizar las cámaras, se observó que el código permitía sacar como máximo 20 fotos. En base a lo anterior, se optimizó el código utilizando listas concatenadas y el buffer de cada cámara.
 
 [CODIGO MULTIPLES DISPAROS SINCRONIZADOS](MULTIPLES_DISPAROS_SINCRONIZADOS.py)
 
@@ -21,11 +21,12 @@ El proceso detallado se encuentra en el siguiente informe:
 
 [INFORME MULTIPLES DISPAROS SINCRONIZADOS](INFORME_2/INFORME_2.pdf)
 
-## Calibrar Camras
+## Calibrar Cámaras
 
-Para poder calibrar las camaras en terminos de posicion y enfoque se utiliza el siguiente codigo:
+Para poder calibrar las cámaras en términos de posición y enfoque se utiliza el siguiente código:
 
 [CALIBRAR CAMARAS](CALIBRAR_CAMARAS.py)
 
-#nota: aun no se termina de optimizar, ya que es un codigo reciclado, ademas, una opcion es implementarlo en el codigo final.
+# Nota: Aún no se termina de optimizar, ya que es un código reciclado, además, una opción es implementarlo en el código final.
+
 
