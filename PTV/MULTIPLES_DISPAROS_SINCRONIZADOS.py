@@ -99,10 +99,10 @@ class linked_list:
 
 #---------------------
 # DETERMINO EL NOMBRE DE CARPETA
-RPM = 8362
+RPM = 1
 
 # DETERMINO CANTIDAD DE IMAGENES A SACAR
-countOfImagesToGrab = 10000
+countOfImagesToGrab = 1
 #---------------------
 
 buffer = 5000
