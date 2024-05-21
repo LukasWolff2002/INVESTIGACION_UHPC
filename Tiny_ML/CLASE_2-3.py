@@ -53,3 +53,8 @@ print(val_labels[0])
 #link a colab:
 #https://colab.research.google.com/github/tinyMLx/colabs/blob/master/2-2-7-ExploringCategorical.ipynb#scrollTo=lqpHrDyp5acs
 
+#se puede ver que le primera layer tiene un peso de 15680 = 28*28*20
+
+#es decir, cada pixel tiene un peso en cada neurona
+
+#luego el segundo layer tiene un peso de 200, ya que son 10 neuronas por 20 datos que provienen uno desde cada neurona anterior
