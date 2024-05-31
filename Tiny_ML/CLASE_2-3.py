@@ -27,7 +27,7 @@ model = tf.keras.models.Sequential([tf.keras.layers.Flatten(input_shape=(28,28))
 
 #por lo tanto tenemos lo siguiente:
 
-#input ----> [20 neuronas] ----> [10 neuronas] ----> output
+#input [28^2 neoronas donde entra un valor a cada una] ----> [20 neuronas] ----> [10 neuronas] ----> output
 #donde todas las neuronas estan entrelazadas entre si
 
 #para compilar y entrenar el modelo es bastante similar

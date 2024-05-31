@@ -6,6 +6,9 @@ import datetime
 from PIL import Image
 import cv2
 import os
+import curses
+
+
 
 # Creamos la clase para listas concatenadas
 class node:
@@ -97,6 +100,23 @@ class linked_list:
             print(f"Imagen guardada: {file_path}")
             current_node = current_node.next
 
+#FUNCIONES PARA DETENER EL CICLO
+def main(stdscr):
+    stdscr.nodelay(True)
+    try:
+        return stdscr.getkey()
+    except:
+        return None
+
+def key_pressed(key):
+    inp_key = curses.wrapper(main)
+
+    while inp_key is not None:
+        if key == inp_key:
+            return True
+        inp_key = curses.wrapper(main)
+    return False
+
 #---------------------
 # DETERMINO EL NOMBRE DE CARPETA
 RPM = 'TOMA 1'
@@ -142,7 +162,7 @@ try:
         
         # Configure camera settings
         cam.AcquisitionFrameRateEnable.SetValue(True)
-        cam.AcquisitionFrameRate.SetValue(0.5)
+        cam.AcquisitionFrameRate.SetValue(1)
         cam.ExposureTime.SetValue(3000)  # Set exposure time to 100 microseconds
 
         # Close the camera after setting parameters
@@ -160,13 +180,23 @@ try:
     #----------------------
     
     for i in range(countOfImagesToGrab):
+
+        
+   
         if not cameras.IsGrabbing():
             break
+        
+        if not key_pressed("q"):
+            #recibo la foto y la guardo como array y en la lista concatenada
+            grabResult = cameras.RetrieveResult(40000, pylon.TimeoutHandling_ThrowException)
+            s.add_at_front(grabResult)
 
-        #recibo la foto y la guardo como array y en la lista concatenada
-        grabResult = cameras.RetrieveResult(40000, pylon.TimeoutHandling_ThrowException)
-        s.add_at_front(grabResult)
+        else: 
 
+            #recibo la foto y la guardo como array y en la lista concatenada
+            grabResult = cameras.RetrieveResult(40000, pylon.TimeoutHandling_ThrowException)
+            s.add_at_front(grabResult)
+            break
 
         
 finally:
